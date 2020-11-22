@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            background-color: activeborder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <body>
+        <h1>Controller Aluno</h1>
+
+        <div>Create</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.aluno</div>
+        <div>Metodo Post</div>
+        <div>Corpo Json</div>
+        <div>{
+            "email": "markusmak@gmail.com",
+            "nome":"Markus",
+            "senha": "123456"}</div>
+        <br>
+
+        <div>Delete</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.aluno/1</div>
+        <div>Metodo Delete</div>
+        <br>
+
+        <div>UpDate</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.aluno/1</div>
+        <div>Metodo Put</div>
+        <div>Corpo Json</div>
+        <div>{
+            "id": 1,
+            "email": "markusmak@gmail.com",
+            "nome":"Markus",
+            "senha": "123456"}</div>
+        <br>
+
+        <div>Get</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.aluno/</div>
+        <div>Metodo GET</div>
+        <br>
+
+        <div>GET Id</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.aluno/1</div>
+        <div>Metodo GET</div>
+        <br>
+
+        <h1>Controller Professor</h1>
+
+        <div>Create</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.professor</div>
+        <div>Metodo Post</div>
+        <div>Corpo Json</div>
+        <div>{
+            "email": "markusmak@gmail.com",
+            "nome":"Markus",
+            "senha": "123456"}</div>
+        <br>
+
+        <div>Delete</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.professor/1</div>
+        <div>Metodo Delete</div>
+        <br>
+
+        <div>UpDate</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.professor/1</div>
+        <div>Metodo Put</div>
+        <div>Corpo Json</div>
+        <div>{
+            "id": 1,
+            "email": "markusmak@gmail.com",
+            "nome":"Markus",
+            "senha": "123456"}</div>
+        <br>
+
+        <div>Get</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.professor/</div>
+        <div>Metodo GET</div>
+        <br>
+
+        <div>GET Id</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.professor/1</div>
+        <div>Metodo GET</div>
+        <br>
+
+        <h1>Controller Notas</h1>
+
+        <div>Create</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.notas</div>
+        <div>Metodo Post</div>
+        <div>Corpo Json</div>
+        <div>{"AV1": 7.0,
+            "AV2": 0,
+            "AV3": 0,
+            "id_aluno": 4,
+            "id_professor": 9}</div>
+        <br>
+
+        <div>Delete</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.notas/1</div>
+        <div>Metodo Delete</div>
+        <br>
+
+        <div>UpDate</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.notas/10</div>
+        <div>Metodo Put</div>
+        <div>Corpo Json</div>
+        <div>{"id": 10,
+	"AV1": 7.0,
+	"AV2": 7.0,
+	"AV3": 0,
+	"id_aluno": 4,
+	"id_professor": 9}</div>
+        <br>
+
+        <div>Get</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.notas/</div>
+        <div>Metodo GET</div>
+        <br>
+
+        <div>GET Id</div>
+        <div>http://localhost:8080/RestFullAPI/webresources/model.notas/10</div>
+        <div>Metodo GET</div>
+        <br>
+
+    </body>
+</html>
