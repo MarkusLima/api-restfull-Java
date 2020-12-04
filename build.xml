@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="RestFullAPI" default="default" basedir=".">
-    <description>Builds, tests, and runs the project RestFullAPI.</description>
+<project name="CRUD_AUTHENTIC_REST" default="default" basedir=".">
+    <description>Builds, tests, and runs the project CRUD_AUTHENTIC_REST.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 

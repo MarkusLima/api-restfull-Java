@@ -5,8 +5,7 @@
  */
 package service;
 
-import entity.Aluno;
-import entity.Professor;
+import entity.Avaliacao;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -26,27 +25,27 @@ import javax.ws.rs.core.MediaType;
  * @author Home
  */
 @Stateless
-@Path("aluno")
-public class AlunoFacadeREST extends AbstractFacade<Aluno> {
+@Path("avaliacao")
+public class AvaliacaoFacadeREST extends AbstractFacade<Avaliacao> {
 
     @PersistenceContext(unitName = "CRUD_AUTHENTIC_RESTPU")
     private EntityManager em;
 
-    public AlunoFacadeREST() {
-        super(Aluno.class);
+    public AvaliacaoFacadeREST() {
+        super(Avaliacao.class);
     }
 
     @POST
     @Override
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public void create(Aluno entity) {
+    public void create(Avaliacao entity) {
         super.create(entity);
     }
 
     @PUT
     @Path("{id}")
     @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public void edit(@PathParam("id") Long id, Aluno entity) {
+    public void edit(@PathParam("id") Long id, Avaliacao entity) {
         super.edit(entity);
     }
 
@@ -59,21 +58,21 @@ public class AlunoFacadeREST extends AbstractFacade<Aluno> {
     @GET
     @Path("{id}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Aluno find(@PathParam("id") Long id) {
+    public Avaliacao find(@PathParam("id") Long id) {
         return super.find(id);
     }
 
     @GET
     @Override
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Aluno> findAll() {
+    public List<Avaliacao> findAll() {
         return super.findAll();
     }
 
     @GET
     @Path("{from}/{to}")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public List<Aluno> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
+    public List<Avaliacao> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
 
@@ -82,12 +81,6 @@ public class AlunoFacadeREST extends AbstractFacade<Aluno> {
     @Produces(MediaType.TEXT_PLAIN)
     public String countREST() {
         return String.valueOf(super.count());
-    }
-        @POST
-    @Path("login/{email}/{senha}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Aluno login(@PathParam("email") String email, @PathParam("senha") String senha){
-        return super.login(email, senha);
     }
 
     @Override

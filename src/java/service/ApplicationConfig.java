@@ -12,7 +12,7 @@ import javax.ws.rs.core.Application;
  *
  * @author Home
  */
-@javax.ws.rs.ApplicationPath("webresources")
+@javax.ws.rs.ApplicationPath("rest")
 public class ApplicationConfig extends Application {
 
     @Override
@@ -30,7 +30,7 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(service.AlunoFacadeREST.class);
-        resources.add(service.NotasFacadeREST.class);
+        resources.add(service.AvaliacaoFacadeREST.class);
         resources.add(service.ProfessorFacadeREST.class);
     }
     

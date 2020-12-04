@@ -60,5 +60,15 @@ public abstract class AbstractFacade<T> {
         javax.persistence.Query q = getEntityManager().createQuery(cq);
         return ((Long) q.getSingleResult()).intValue();
     }
-    
+
+    public T login(String u, String p) {
+        return (T) getEntityManager().createNamedQuery("Usuario.login")
+                .setParameter("email", u).setParameter("senha", p).getSingleResult();
+    }
+
+    public T loginP(String u, String p) {
+        return (T) getEntityManager().createNamedQuery("Professor.login")
+                .setParameter("email", u).setParameter("senha", p).getSingleResult();
+    }
+
 }

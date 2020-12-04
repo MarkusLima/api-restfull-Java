@@ -5,6 +5,7 @@
  */
 package service;
 
+import entity.Professor;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -18,17 +19,16 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import model.Professor;
 
 /**
  *
  * @author Home
  */
 @Stateless
-@Path("model.professor")
+@Path("professor")
 public class ProfessorFacadeREST extends AbstractFacade<Professor> {
 
-    @PersistenceContext(unitName = "RestFullAPIPU")
+    @PersistenceContext(unitName = "CRUD_AUTHENTIC_RESTPU")
     private EntityManager em;
 
     public ProfessorFacadeREST() {
@@ -82,10 +82,18 @@ public class ProfessorFacadeREST extends AbstractFacade<Professor> {
     public String countREST() {
         return String.valueOf(super.count());
     }
+    
+    @POST
+    @Path("login/{email}/{senha}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Professor loginP(@PathParam("email") String email, @PathParam("senha") String senha){
+        return super.loginP(email, senha);
+    }
 
     @Override
     protected EntityManager getEntityManager() {
         return em;
     }
+    
     
 }
